@@ -9,101 +9,135 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 		integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+	<script src="https://kit.fontawesome.com/db44492cd5.js" crossorigin="anonymous"></script>
 	<title>OhMyFood</title>
 </head>
 
 <body>
 	<header>
-		<h1 class="logo">ohmyfood</h1>
-		<div>
-			<i class="fas fa-map-marker-alt"></i>
-			<p class="">Paris, Belleville</p>
+		<div class="section1">
+			<div class="dfc">
+				<p class="logo">ohmyfood</p>
+			</div>
+			<div class="dfc localization">
+				<i class="fas fa-map-marker-alt"></i>
+				<p>Paris, Belleville</p>
+			</div>
+			<div class="redirect">
+				<h2>Réservez le menu qui vous convient</h2>
+				<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+				<div class="dfc">
+					<button>Explorer nos restaurants</button>
+				</div>
+			</div>
 		</div>
-		<h2 class="">Réservez le menu qui vous convient</h2>
-		<p class="">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-		<button>Explorer nos restaurants</button>
-		<h2>Fonctionnement</h2>
-		<a>
-			<i class="fas fa-mobile-alt"></i>
-			<button>Choisissez un restaurant</button>
-		</a>
-		<a>
-			<i class="fas fa-list"></i>
-			<button>Composez votre menu</button>
-		</a>
-		<a>
-			<i class="fas fa-store"></i>
-			<button>Dégustez au restaurant</button>
-		</a>
+		<div class="section2">
+			<h2>Fonctionnement</h2>
+			<div class="buttons">
+				<a>
+					<i class="fa-duotone fa-1 circle fa-xs"></i>
+					<button>
+						<i class="fas fa-mobile-alt fa-lg"></i>
+						<p>Choisissez un restaurant</p>
+					</button>
+				</a>
+				<a>
+					<i class="fa-duotone fa-2 circle fa-xs"></i>
+					<button>
+						<i class="fas fa-list fa-lg"></i>
+						<p>Composez votre menu</p>
+					</button>
+				</a>
+				<a>
+					<i class="fa-duotone fa-3 circle fa-xs"></i>
+					<button>
+						<i class="fas fa-store fa-lg"></i>
+						<p>Dégustez au restaurant</p>
+					</button>
+				</a>
+			</div>
+		</div>
 	</header>
 	<main>
-		<article>
+		<section class="section1">
 			<h2>Restaurants</h2>
-			<div class="container">
-				<section>
+			<div class="container_restaurant">
+				<article>
 					<a href="" title="La palette du goût">
 						<img src="images/resized/jay-wennington-N_Y88TWmGwA-unspl.jpg" alt="La palette du goût">
-						<p>Nouveau</p>
-						<div class="description">
-							<p>La palette du goût</p>
-							<p>Ménilmontant</p>
+						<p class="new">Nouveau</p>
+						<div class="info">
+							<div>
+								<p class="name">La palette du goût</p>
+								<p class="description">Ménilmontant</p>
+							</div>
 							<i class="far fa-heart"></i>
 						</div>
 					</a>
-				</section>
-				<section>
+				</article>
+				<article>
 					<a href="" title="La note enchantée">
-						<img src="images/resized/louis-hansel-shotsoflouis-qNBGVy.jpg" alt="La note enchantée">
-						<p>Nouveau</p>
-						<div class="description">
-							<p>La note enchantée</p>
-							<p>Charonne</p>
+						<img src="images/resized/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+						<p class="new">Nouveau</p>
+						<div class="info">
+							<div>
+								<p class="name">La note enchantée</p>
+								<p class="description">Charonne</p>
+							</div>
 							<i class="far fa-heart"></i>
 						</div>
 					</a>
-				</section>
-				<section>
+				</article>
+				<article>
 					<a href="" title="À la française">
-						<img src="images/resized/stil-u2Lp8tXIcjw-unsplash.jpg" alt="À la française">
-						<div class="description">
-							<p>À la française</p>
-							<p>Cité Rouge</p>
+						<img src="images/resized/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+						<div class="info">
+							<div>
+								<p class="name">À la française</p>
+								<p class="description">Cité Rouge</p>
+							</div>
 							<i class="far fa-heart"></i>
 						</div>
 					</a>
-				</section>
-				<section>
+				</article>
+				<article>
 					<a href="" title="Le délice des sens">
-						<img src="images/resized/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Le délice des sens">
-						<div class="description">
-							<p>Le délice des sens</p>
-							<p>Folie-Méricourt</p>
+						<img src="images/resized/louis-hansel-shotsoflouis-qNBGVy.jpg" alt="Le délice des sens">
+						<div class="info">
+							<div>
+								<p class="name">Le délice des sens</p>
+								<p class="description">Folie-Méricourt</p>
+							</div>
 							<i class="far fa-heart"></i>
 						</div>
 					</a>
-				</section>
+				</article>
 			</div>
-		</article>
+		</section>
 	</main>
 	<footer>
-		<p class="logo">ohmyfood</p>
-		<a href="" title="Proposer un restaurant">
-			<i class="fas fa-utensils"></i>
-			<p>Proposer un restaurant</p>
-		</a>
-		<a href="" title="Devenir partenaire">
-			<i class="fas fa-hands-helping"></i>
-			<p>Devenir partenaire</p>
-		</a>
-		<a href="" title="Mentions légales">
-			<p>Mentions légales</p>
-		</a>
-		<a href="" title="Contact">
-			<p>Contact</p>
-		</a>
+		<div class="container">
+			<p class="logo">ohmyfood</p>
+			<div>
+				<a href="" title="Proposer un restaurant">
+					<i class="size fas fa-utensils fa-xs"></i>
+					<p>Proposer un restaurant</p>
+				</a>
+				<a href="" title="Devenir partenaire">
+					<i class="fas fa-hands-helping fa-xs"></i>
+					<p>Devenir partenaire</p>
+				</a>
+				<a href="" title="Mentions légales">
+					<p>Mentions légales</p>
+				</a>
+				<a href="" title="Contact">
+					<p>Contact</p>
+				</a>
+			</div>
+		</div>
 	</footer>
 </body>
 
