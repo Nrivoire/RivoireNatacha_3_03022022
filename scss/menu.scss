@@ -1,0 +1,210 @@
+body, footer {
+	font-family : Roboto;
+}
+
+body {
+	margin: 0 auto;
+	width: 320px;
+}
+
+.logo, .hd {
+	font-family: Shrikhand;
+}
+
+a {
+	text-decoration: inherit;
+}
+
+.logo {
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/*----animation générale----*/
+.hoover {
+    transform: scale(1);
+    transition: transform 100ms;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+}
+
+/*-------------------------------------------------*/
+/*---------------------HEADER----------------------*/
+/*-------------------------------------------------*/
+header {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+	i {
+		position: absolute;
+		left: 20px;
+		color: rgb(95, 95, 95);
+	}
+	.logo {
+		font-size: 25px;
+	}
+}
+
+
+/*-------------------------------------------------*/
+/*----------------------MAIN-----------------------*/
+/*-------------------------------------------------*/
+main {
+	.section1 {
+		display: flex;
+    	flex-direction: column;
+    	background-color: #f6f6f6;
+		img {
+			width: 100%;
+			height: 240px;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+		/*-- titre --*/
+		.container_title {
+			position: relative;
+			.item_title {
+				background-color: #f6f6f6;
+				position: absolute;
+				bottom: -15px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-top-left-radius: 35px;
+				border-top-right-radius: 35px;
+				width: 87.5%;
+				.heart {
+					i {
+						font-size: 20px;
+						-webkit-text-stroke: 0.5px black;
+						color: #f6f6f6;
+						cursor: pointer;
+						&:hover {
+							color: #9356DC;
+							transition: linear 400ms;
+						}
+					}
+					.fill-heart {
+						display: none;
+					}
+					.fill-heart:checked + label > i {
+						color: #9356DC;
+					}
+				}
+			}
+		}
+		/*-- cartes --*/
+		.container {
+			display: flex;
+			flex-direction: column;
+			row-gap: 12px;
+			padding-left: 15px;
+			padding-right: 10px;
+			margin-bottom: 25px;
+			h3 {
+				font-weight: 100;
+				font-size: 17px;
+				margin-left: 3px;
+				margin-bottom: 8px;
+				position: relative;
+				z-index: 1;
+				&:before {
+					content: "";
+					position:absolute;
+					border-bottom: 3px solid #99E2D0;
+					bottom: -8px;
+					left: 0;
+					width: 42px;
+				}
+			}
+			.item {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-end;
+				background-color: #FFFFFF;
+				border-radius: 15px;
+				padding-left: 10px;
+				padding-right: 20px;
+				box-shadow: 0 10px 10px #E9E9E9;
+				transform: scale(1);
+    			transition: transform 100ms;
+				.name {
+					font-size: 15px;
+					font-weight: bold;
+					margin-bottom: 5px;
+				}
+				.description {
+					font-size: 12px;
+					margin-top: 0;
+				}
+				.price {
+					font-size: 15px;
+					font-weight: bold;
+					color:rgb(58, 58, 58);
+				}
+			}
+		}
+	}
+	.command {
+		margin-bottom: 70px;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		button {
+			background-color:#FF79DA;
+			color:white;
+			border: none;
+			border-radius: 50px;
+			padding-left: 50px;
+			padding-right: 50px;
+			font-size: 15px;
+			&:hover {
+				background: #ff9ce3;
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------*/
+/*--------------------FOOTER-----------------------*/
+/*-------------------------------------------------*/
+
+footer {
+    .container {
+        background-color: #353535;
+        color: #FFFFFF;
+        display :flex;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-bottom: 30px;
+		font-size: 12px;
+        .logo {
+            margin-top: 10px;
+   			font-size: 15px;
+        }
+        a {
+            text-decoration: inherit;
+            color: #FFFFFF;
+            display :flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            column-gap: 10px;
+            margin-top: 6px;
+            .size {
+                margin-left: 3px;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

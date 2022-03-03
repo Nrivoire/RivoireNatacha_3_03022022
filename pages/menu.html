@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/menu.css" />
+	<link rel="stylesheet" href="../scss/menu.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -15,7 +15,9 @@
 
 <body>
     <header>
-        <i class="fa-solid fa-arrow-left"></i>
+        <a href="../index.html" title="accueil">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
         <p class="logo">ohmyfood</p>
     </header>
     <main>
@@ -24,11 +26,14 @@
                 <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
                 <div class="item_title">
                     <h2>À la française</h2>
-                    <i class="far fa-heart"></i>
+                    <div class="heart">
+                        <input type="checkbox" class="fill-heart" id="onclick-heart1">
+                        <label for="onclick-heart1"><i class="fa-solid fa-heart"></i></label>
+                    </div>
                 </div>
             </div>
             <div class="container">
-                <h3>ENTRÉES</h3>
+                <h3 class="barre">ENTRÉES</h3>
                 <div class="item">
                     <div class="">
                         <p class="name">Tartare de poulpe acidulé</p>
@@ -52,7 +57,7 @@
                 </div>
             </div>
             <div class="container">
-                <h3>PLATS</h3>
+                <h3 class="barre">PLATS</h3>
                 <div class="item">
                     <div class="">
                         <p class="name">Coquilles Saint-Jacques</p>
@@ -76,7 +81,7 @@
                 </div>
             </div>
             <div class="container">
-                <h3>DESSERTS</h3>
+                <h3 class="barre">DESSERTS</h3>
                 <div class="item">
                     <div class="">
                         <p class="name">Pétales de violettes glacés</p>
@@ -100,7 +105,7 @@
                 </div>
             </div>
             <div class="command">
-                <button type="submit">
+                <button class="hoover" type="submit">
                     <p>Commander</p>
                 </button>
             </div>

@@ -5,6 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="scss/index.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -29,44 +30,47 @@
 			<div class="redirect">
 				<h2>Réservez le menu qui vous convient</h2>
 				<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-				<div class="dfc">
-					<button>Explorer nos restaurants</button>
-				</div>
+				<a href="#main" class="dfc">
+					<button class="hoover">Explorer nos restaurants</button>
+				</a>
 			</div>
 		</div>
 		<div class="section2">
 			<h2>Fonctionnement</h2>
-			<div class="buttons">
-				<a>
+			<div class="container">
+				<a href="#main" class="item" title="Choisissez un restaurant">
 					<i class="fa-duotone fa-1 circle fa-xs"></i>
-					<button>
+					<button class="btn">
+						<span class="btn-color-fill"></span>
 						<i class="fas fa-mobile-alt fa-lg"></i>
 						<p>Choisissez un restaurant</p>
 					</button>
 				</a>
-				<a>
+				<a href="./pages/menu.html" class="item" title="Composez votre menu">
 					<i class="fa-duotone fa-2 circle fa-xs"></i>
-					<button>
+					<button class="btn">
 						<i class="fas fa-list fa-lg"></i>
 						<p>Composez votre menu</p>
+						<span class="btn-color-fill"></span>
 					</button>
 				</a>
-				<a>
+				<div class="item">
 					<i class="fa-duotone fa-3 circle fa-xs"></i>
-					<button>
+					<button class="btn">
 						<i class="fas fa-store fa-lg"></i>
 						<p>Dégustez au restaurant</p>
+						<span class="btn-color-fill"></span>
 					</button>
 				</a>
 			</div>
 		</div>
 	</header>
-	<main>
+	<main id="main">
 		<section class="section1">
 			<h2>Restaurants</h2>
 			<div class="container_restaurant">
-				<article>
-					<a href="" title="La palette du goût">
+				<article class="hoover">
+					<div class="item">
 						<img src="images/resized/jay-wennington-N_Y88TWmGwA-unspl.jpg" alt="La palette du goût">
 						<p class="new">Nouveau</p>
 						<div class="info">
@@ -74,12 +78,15 @@
 								<p class="name">La palette du goût</p>
 								<p class="description">Ménilmontant</p>
 							</div>
-							<i class="far fa-heart"></i>
+							<div class="heart">
+								<input type="checkbox" class="fill-heart" id="onclick-heart1">
+								<label for="onclick-heart1"><i class="fa-solid fa-heart"></i></label>
+							</div>
 						</div>
-					</a>
+					</div>
 				</article>
-				<article>
-					<a href="" title="La note enchantée">
+				<article class="hoover">
+					<div class="item">
 						<img src="images/resized/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
 						<p class="new">Nouveau</p>
 						<div class="info">
@@ -87,33 +94,42 @@
 								<p class="name">La note enchantée</p>
 								<p class="description">Charonne</p>
 							</div>
-							<i class="far fa-heart"></i>
+							<div class="heart">
+								<input type="checkbox" class="fill-heart" id="onclick-heart2">
+								<label for="onclick-heart2"><i class="fa-solid fa-heart"></i></label>
+							</div>
 						</div>
-					</a>
+					</div>
 				</article>
-				<article>
-					<a href="" title="À la française">
+				<article class="hoover">
+					<div class="item">
 						<img src="images/resized/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
 						<div class="info">
 							<div>
 								<p class="name">À la française</p>
 								<p class="description">Cité Rouge</p>
 							</div>
-							<i class="far fa-heart"></i>
+							<div class="heart">
+								<input type="checkbox" class="fill-heart" id="onclick-heart3">
+								<label for="onclick-heart3"><i class="fa-solid fa-heart"></i></label>
+							</div>
 						</div>
-					</a>
+					</div>
 				</article>
-				<article>
-					<a href="" title="Le délice des sens">
+				<article class="hoover">
+					<div class="item">
 						<img src="images/resized/louis-hansel-shotsoflouis-qNBGVy.jpg" alt="Le délice des sens">
 						<div class="info">
 							<div>
 								<p class="name">Le délice des sens</p>
 								<p class="description">Folie-Méricourt</p>
 							</div>
-							<i class="far fa-heart"></i>
+							<div class="heart">
+								<input type="checkbox" class="fill-heart" id="onclick-heart4">
+								<label for="onclick-heart4"><i class="fa-solid fa-heart"></i></label>
+							</div>
 						</div>
-					</a>
+					</div>
 				</article>
 			</div>
 		</section>

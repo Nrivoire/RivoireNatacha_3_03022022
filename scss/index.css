@@ -1,0 +1,376 @@
+@charset "UTF-8";
+body, footer {
+  font-family: Roboto;
+}
+
+body {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.logo, .hd {
+  font-family: Shrikhand;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+/*----animation générale----*/
+.hoover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 100ms;
+  transition: -webkit-transform 100ms;
+  transition: transform 100ms;
+  transition: transform 100ms, -webkit-transform 100ms;
+}
+
+.hoover:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+/*-------------------------------------------------*/
+/*---------------------HEADER----------------------*/
+/*-------------------------------------------------*/
+/*-------------------- section1 -------------------*/
+header .section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .section1 .dfc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .section1 .logo {
+  font-size: 25px;
+  margin: 0;
+  padding: 10px;
+}
+
+header .section1 .localization {
+  background-color: #eaeaea;
+  font-weight: bold;
+  color: #424242;
+}
+
+header .section1 .localization i {
+  margin-top: 16px;
+  margin-right: 16px;
+}
+
+header .section1 .redirect {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .section1 .redirect h2 {
+  margin-top: 0;
+  text-align: center;
+  padding: 30px 35px;
+}
+
+header .section1 .redirect p {
+  margin-top: 0;
+  text-align: center;
+  color: #424242;
+}
+
+header .section1 .redirect button {
+  background: #FF79DA;
+  color: #FFF;
+  font-size: 16px;
+  padding: 15px 22px;
+  margin: 10px 10px 50px;
+  border-radius: 50px;
+  border: none;
+}
+
+header .section1 .redirect button:hover {
+  background: #ff9ce3;
+}
+
+/*-------------------- section2 -------------------*/
+header .section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 25px 10px 55px 20px;
+}
+
+header .section2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 23px;
+}
+
+header .section2 .container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .section2 .container .item .circle {
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: white;
+  padding: 12px 8px 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+header .section2 .container .item .btn {
+  width: 98%;
+  padding: 10px 6px 8px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  border: none;
+  -webkit-box-shadow: 0 10px 10px #E9E9E9;
+          box-shadow: 0 10px 10px #E9E9E9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+header .section2 .container .item .btn p {
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+header .section2 .container .item .btn i {
+  color: #8b8b8b;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+header .section2 .container .item .btn .btn-color-fill {
+  background-color: #ffd9f7;
+  -webkit-transition: linear 200ms;
+  transition: linear 200ms;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+header .section2 .container .item .btn:hover .btn-color-fill {
+  width: 97%;
+}
+
+/*-------------------------------------------------*/
+/*----------------------MAIN-----------------------*/
+/*-------------------------------------------------*/
+/*-------------------- section1 -------------------*/
+main .section1 {
+  background-color: #f6f6f6;
+  padding: 20px 0 50px;
+}
+
+main .section1 h2 {
+  margin-left: 20px;
+}
+
+main .section1 .container_restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 20px;
+}
+
+main .section1 .container_restaurant article {
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 15px #bebebedc;
+          box-shadow: 0 0 15px #bebebedc;
+}
+
+main .section1 .container_restaurant article p {
+  margin: 0;
+  margin-top: 5px;
+}
+
+main .section1 .container_restaurant article .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 215px;
+  position: relative;
+}
+
+main .section1 .container_restaurant article .item img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 100%;
+     object-position: 100% 100%;
+}
+
+main .section1 .container_restaurant article .item .new {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #078B6B;
+  background-color: #99E2D0;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 2px;
+}
+
+main .section1 .container_restaurant article .item .info {
+  margin-left: 12px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+main .section1 .container_restaurant article .item .info .name {
+  font-weight: bold;
+  text-shadow: 0.5px 0 rgba(0, 0, 0, 0.555);
+  letter-spacing: 0.5px;
+}
+
+main .section1 .container_restaurant article .item .info .heart i {
+  font-size: 20px;
+  -webkit-text-stroke: 0.5px black;
+  color: white;
+  cursor: pointer;
+}
+
+main .section1 .container_restaurant article .item .info .heart i:hover {
+  color: #9356DC;
+  -webkit-transition: linear 400ms;
+  transition: linear 400ms;
+}
+
+main .section1 .container_restaurant article .item .info .heart .fill-heart {
+  display: none;
+}
+
+main .section1 .container_restaurant article .item .info .heart .fill-heart:checked + label > i {
+  color: #9356DC;
+}
+
+/*-------------------------------------------------*/
+/*--------------------FOOTER-----------------------*/
+/*-------------------------------------------------*/
+footer .container {
+  background-color: #353535;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 25px;
+  padding-bottom: 30px;
+  font-size: 12px;
+}
+
+footer .container .logo {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+footer .container a {
+  text-decoration: inherit;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  margin-top: 6px;
+}
+
+footer .container a .size {
+  margin-left: 3px;
+}
+
+footer .container a p {
+  margin: 0;
+}
+/*# sourceMappingURL=index.css.map */
