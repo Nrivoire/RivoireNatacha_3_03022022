@@ -65,11 +65,23 @@ header .section1 .localization {
   background-color: #eaeaea;
   font-weight: bold;
   color: #424242;
+  padding: 10px;
 }
 
 header .section1 .localization i {
-  margin-top: 16px;
-  margin-right: 16px;
+  margin-right: 5px;
+}
+
+header .section1 .localization input {
+  border: none;
+  background-color: #eaeaea;
+  text-align: center;
+  width: 40%;
+}
+
+header .section1 .localization input:focus {
+  color: #FF79DA;
+  outline: none;
 }
 
 header .section1 .redirect {
@@ -96,8 +108,8 @@ header .section1 .redirect p {
 }
 
 header .section1 .redirect button {
-  background: #FF79DA;
-  color: #FFF;
+  background: repeating-linear-gradient(#FF79DA, #9356DC);
+  color: white;
   font-size: 16px;
   padding: 15px 22px;
   margin: 10px 10px 50px;
@@ -106,7 +118,9 @@ header .section1 .redirect button {
 }
 
 header .section1 .redirect button:hover {
-  background: #ff9ce3;
+  background: repeating-linear-gradient(#ff83dd, #985ede);
+  -webkit-box-shadow: 0 0 25px #bebebedc;
+          box-shadow: 0 0 25px #bebebedc;
 }
 
 /*-------------------- section2 -------------------*/
@@ -327,7 +341,7 @@ main .section1 .container_restaurant article .item .info .heart .fill-heart:chec
 /*-------------------------------------------------*/
 footer .container {
   background-color: #353535;
-  color: #FFFFFF;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,7 +361,7 @@ footer .container .logo {
 
 footer .container a {
   text-decoration: inherit;
-  color: #FFFFFF;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

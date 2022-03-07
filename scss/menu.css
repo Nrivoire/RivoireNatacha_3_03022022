@@ -222,7 +222,7 @@ main .section1 .container .item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #FFFFFF;
+  background-color: white;
   border-radius: 15px;
   padding-left: 10px;
   padding-right: 20px;
@@ -399,7 +399,7 @@ main .command {
 }
 
 main .command button {
-  background-color: #FF79DA;
+  background: repeating-linear-gradient(#FF79DA, #9356DC);
   color: white;
   border: none;
   border-radius: 50px;
@@ -409,7 +409,9 @@ main .command button {
 }
 
 main .command button:hover {
-  background: #ff9ce3;
+  background: repeating-linear-gradient(#ff83dd, #985ede);
+  -webkit-box-shadow: 0 0 15px #bebebedc;
+          box-shadow: 0 0 15px #bebebedc;
 }
 
 /*-------------------------------------------------*/
@@ -417,7 +419,7 @@ main .command button:hover {
 /*-------------------------------------------------*/
 footer .container {
   background-color: #353535;
-  color: #FFFFFF;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,7 +439,7 @@ footer .container .logo {
 
 footer .container a {
   text-decoration: inherit;
-  color: #FFFFFF;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

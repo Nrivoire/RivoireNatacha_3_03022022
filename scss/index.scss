@@ -1,3 +1,14 @@
+$first: #FF79DA;
+$second : #9356DC;
+$third: #99E2D0;
+$background_grey_darker:#eaeaea;
+$font_grey:rgb(66, 66, 66);
+$background_grey_lighter : #f6f6f6;
+$pink_animate:#ffd9f7;
+$new_font_color : #078B6B;
+$shadow_color : #bebebedc;
+$footer_background: #353535;
+
 body, footer {
 	font-family : Roboto;
 }
@@ -43,16 +54,26 @@ header .section1 {
         padding: 10px;
     }
     .localization {
-        background-color: #eaeaea;
+        background-color: $background_grey_darker;
         font-weight: bold;
-        color: rgb(66, 66, 66);
+        color: $font_grey;
+        padding: 10px;
         i {
-            margin-top: 16px;
-            margin-right: 16px;
+            margin-right: 5px;
+        }
+        input {
+            border: none;
+            background-color: $background_grey_darker;
+            text-align: center;
+            width: 40%;
+            &:focus {
+                color:$first;
+                outline: none;
+            }
         }
     }
     .redirect {
-        background-color: #f6f6f6;
+        background-color: $background_grey_lighter;
         display: flex;
         flex-direction: column;
         h2 {
@@ -63,20 +84,21 @@ header .section1 {
         p {
             margin-top: 0;
 	        text-align: center;
-            color: rgb(66, 66, 66);
+            color: $font_grey;
         }
         button {
-            background: #FF79DA;
-            color: #FFF;
-            font-size: 16px;
+			background: repeating-linear-gradient($first ,$second);
+			color:white;
+			font-size: 16px;
             padding: 15px 22px;
             margin: 10px 10px 50px;
             border-radius: 50px;
             border: none;
 			&:hover {
-				background: #ff9ce3;
+				background: repeating-linear-gradient(adjust-color($first, $lightness: 2%) ,adjust-color($second, $lightness: 2%));
+				box-shadow: 0 0 25px $shadow_color;
 			}
-        }
+		}
     }
 }
 
@@ -94,7 +116,7 @@ header .section2 {
 	        align-items: center;
 	        position: relative;
             .circle {
-                background-color: #9356DC;
+                background-color: $second;
                 border-radius: 50%;
                 color: white;
                 padding: 12px 8px 10px;
@@ -105,7 +127,7 @@ header .section2 {
                 width: 98%;
                 padding: 10px 6px 8px;
                 border-radius: 20px;
-                background-color: #f6f6f6;
+                background-color: $background_grey_lighter;
                 border: none;
                 box-shadow: 0 10px 10px #E9E9E9;
                 display: flex;
@@ -125,7 +147,7 @@ header .section2 {
                     z-index: 2;
                 }
                 .btn-color-fill {
-                    background-color: #ffd9f7;
+                    background-color: $pink_animate;
                     transition: linear 200ms;
                     width: 0;
                     height: 100%;
@@ -149,7 +171,7 @@ header .section2 {
 
 /*-------------------- section1 -------------------*/
 main .section1{
-    background-color: #f6f6f6;
+    background-color: $background_grey_lighter;
 	padding: 20px 0 50px;
     h2 {
         margin-left: 20px;
@@ -162,7 +184,7 @@ main .section1{
         article {
             background-color: white;
             border-radius: 15px;
-            box-shadow: 0 0 15px #bebebedc;
+            box-shadow: 0 0 15px $shadow_color;
             p {
                 margin: 0;
                 margin-top: 5px;
@@ -185,8 +207,8 @@ main .section1{
                     position: absolute;
                     top: 8px;
                     right: 10px;
-                    color: #078B6B;
-                    background-color: #99E2D0;
+                    color: $new_font_color;
+                    background-color: $third;
                     font-weight: bold;
                     font-size: 12px;
                     padding: 6px;
@@ -213,7 +235,7 @@ main .section1{
                             color: white;
 							cursor: pointer;
                             &:hover {
-                                color: #9356DC;
+                                color: $second;
                                 transition: linear 400ms;
                             }
                         }
@@ -221,7 +243,7 @@ main .section1{
 							display: none;
 						}
 						.fill-heart:checked + label > i {
-							color: #9356DC;
+							color: $second;
 						}
                     }
                 }
@@ -236,8 +258,8 @@ main .section1{
 
 footer {
     .container {
-        background-color: #353535;
-        color: #FFFFFF;
+        background-color: $footer_background;
+        color: white;
         display :flex;
         flex-direction: column;
         padding-left: 25px;
@@ -249,7 +271,7 @@ footer {
         }
         a {
             text-decoration: inherit;
-            color: #FFFFFF;
+            color: white;
             display :flex;
             flex-direction: row;
             align-items: center;

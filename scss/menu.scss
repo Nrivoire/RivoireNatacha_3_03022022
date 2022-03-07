@@ -1,3 +1,13 @@
+$first: #FF79DA;
+$second : #9356DC;
+$third: #99E2D0;
+$arrow_color: rgb(95, 95, 95);
+$background_color_light_grey: #f6f6f6;
+$shadow_item_color:#E9E9E9;
+$shadow_button_color:#bebebedc;
+$price_color:rgb(58, 58, 58);
+$footer_color:#353535;
+
 body, footer {
 	font-family : Roboto;
 }
@@ -43,7 +53,7 @@ header {
 	i {
 		position: absolute;
 		left: 20px;
-		color: rgb(95, 95, 95);
+		color: $arrow_color;
 	}
 	.logo {
 		font-size: 25px;
@@ -58,7 +68,7 @@ main {
 	.section1 {
 		display: flex;
     	flex-direction: column;
-    	background-color: #f6f6f6;
+    	background-color: $background_color_light_grey;
 		img {
 			width: 100%;
 			height: 240px;
@@ -69,7 +79,7 @@ main {
 		.container_title {
 			position: relative;
 			.item_title {
-				background-color: #f6f6f6;
+				background-color: $background_color_light_grey;
 				position: absolute;
 				bottom: -15px;
 				display: flex;
@@ -85,10 +95,10 @@ main {
 					i {
 						font-size: 20px;
 						-webkit-text-stroke: 0.5px black;
-						color: #f6f6f6;
+						color: $background_color_light_grey;
 						cursor: pointer;
 						&:hover {
-							color: #9356DC;
+							color: $second;
 							transition: linear 400ms;
 						}
 					}
@@ -96,7 +106,7 @@ main {
 						display: none;
 					}
 					.fill-heart:checked + label > i {
-						color: #9356DC;
+						color: $second;
 					}
 				}
 			}
@@ -119,7 +129,7 @@ main {
 				&:before {
 					content: "";
 					position:absolute;
-					border-bottom: 3px solid #99E2D0;
+					border-bottom: 3px solid $third;
 					bottom: -8px;
 					left: 0;
 					width: 42px;
@@ -148,12 +158,11 @@ main {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				//align-items: flex-end;
-				background-color: #FFFFFF;
+				background-color: white;
 				border-radius: 15px;
 				padding-left: 10px;
 				padding-right: 20px;
-				box-shadow: 0 10px 10px #E9E9E9;
+				box-shadow: 0 10px 10px $shadow_item_color;
 				position: relative;
 				.name {
 					font-size: 15px;
@@ -166,7 +175,7 @@ main {
 					z-index: 1;
 				}
 				.price_fill {
-					background-color: #99E2D0;
+					background-color: $third;
 					width: 0;
 					height: 64px;
 					right: 0;
@@ -185,7 +194,7 @@ main {
 					.price {
 						font-size: 15px;
 						font-weight: bold;
-						color:rgb(58, 58, 58);
+						color: $price_color;
 						align-self: flex-end;
 						margin-bottom: 10px;
 						z-index: 2;
@@ -265,7 +274,7 @@ main {
 		display: flex;
 		justify-content: center;
 		button {
-			background-color:#FF79DA;
+			background: repeating-linear-gradient($first ,$second);
 			color:white;
 			border: none;
 			border-radius: 50px;
@@ -273,7 +282,8 @@ main {
 			padding-right: 50px;
 			font-size: 15px;
 			&:hover {
-				background: #ff9ce3;
+				background: repeating-linear-gradient(adjust-color($first, $lightness: 2%) ,adjust-color($second, $lightness: 2%));
+				box-shadow: 0 0 15px $shadow_button_color;
 			}
 		}
 	}
@@ -285,8 +295,8 @@ main {
 
 footer {
     .container {
-        background-color: #353535;
-        color: #FFFFFF;
+        background-color: $footer_color;
+        color: white;
         display :flex;
         flex-direction: column;
         padding-left: 25px;
@@ -298,7 +308,7 @@ footer {
         }
         a {
             text-decoration: inherit;
-            color: #FFFFFF;
+            color: white;
             display :flex;
             flex-direction: row;
             align-items: center;
