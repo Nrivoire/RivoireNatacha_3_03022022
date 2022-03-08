@@ -1,11 +1,61 @@
 @charset "UTF-8";
-body, footer {
-  font-family: Roboto;
+/*-- variables --*/
+/*-- loading spinner --*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
+#spinner .loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  cursor: auto;
+}
+
+#spinner .loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: #FF79DA transparent #9356DC transparent;
+  -webkit-animation: spin 1.5s ease-in-out infinite;
+          animation: spin 1.5s ease-in-out infinite;
+}
+
+#page {
+  display: none;
+}
+
+/*-- règles générale --*/
 body {
   margin: 0 auto;
-  width: 320px;
+}
+
+body, footer {
+  font-family: Roboto;
 }
 
 .logo, .hd {
@@ -17,7 +67,7 @@ a {
   color: black;
 }
 
-/*----animation générale----*/
+/*-- animations générales --*/
 .hoover {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -33,9 +83,143 @@ a {
           transform: scale(1.02);
 }
 
-/*-------------------------------------------------*/
+/*------------------------------------------------------*/
+/*-------------------------PHONE------------------------*/
+/*------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    width: 320px;
+  }
+  /*---------------------HEADER----------------------*/
+  /*-------------------- section1 -------------------*/
+  header .section1 .localization input {
+    width: 40%;
+  }
+  /*-------------------- section2 -------------------*/
+  header .section2 .container .item .btn {
+    width: 98%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header .section2 .container .item .btn:hover .btn-color-fill {
+    width: 97%;
+  }
+  /*----------------------MAIN-----------------------*/
+  /*-------------------- section1 -------------------*/
+  main .section1 .container_restaurant {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+  }
+  main .section1 .container_restaurant article .item {
+    width: 280px;
+    height: 215px;
+  }
+  main .section1 .container_restaurant article .item img {
+    height: 150px;
+  }
+}
+
+/*------------------------------------------------------*/
+/*------------------------TABLET------------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    width: 768px;
+  }
+  /*---------------------HEADER----------------------*/
+  /*-------------------- section1 -------------------*/
+  header .section1 .localization input {
+    width: 15%;
+  }
+  /*-------------------- section2 -------------------*/
+  header .section2 .container .item .btn {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .section2 .container .item .btn:hover .btn-color-fill {
+    width: 99%;
+  }
+  /*----------------------MAIN-----------------------*/
+  /*-------------------- section1 -------------------*/
+  main .section1 .container_restaurant {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    row-gap: 30px;
+    margin: 50px 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .section1 .container_restaurant article .item {
+    width: 310px;
+    height: 255px;
+  }
+  main .section1 .container_restaurant article .item img {
+    height: 190px;
+  }
+}
+
+/*------------------------------------------------------*/
+/*------------------------DESKTOP-----------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+  body {
+    width: 992px;
+  }
+  /*---------------------HEADER----------------------*/
+  /*-------------------- section1 -------------------*/
+  header .section1 .localization input {
+    width: 15%;
+  }
+  /*-------------------- section2 -------------------*/
+  header .section2 .container .item .btn {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .section2 .container .item .btn:hover .btn-color-fill {
+    width: 99%;
+  }
+  /*----------------------MAIN-----------------------*/
+  /*-------------------- section1 -------------------*/
+  main .section1 .container_restaurant {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    row-gap: 30px;
+    margin: 50px 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .section1 .container_restaurant article .item {
+    width: 370px;
+    height: 255px;
+  }
+  main .section1 .container_restaurant article .item img {
+    height: 190px;
+  }
+}
+
 /*---------------------HEADER----------------------*/
-/*-------------------------------------------------*/
 /*-------------------- section1 -------------------*/
 header .section1 {
   display: -webkit-box;
@@ -77,7 +261,6 @@ header .section1 .localization input {
   border: none;
   background-color: #eaeaea;
   text-align: center;
-  width: 40%;
 }
 
 header .section1 .localization input:focus {
@@ -167,7 +350,6 @@ header .section2 .container .item .circle {
 }
 
 header .section2 .container .item .btn {
-  width: 98%;
   padding: 10px 6px 8px;
   border-radius: 20px;
   background-color: #f6f6f6;
@@ -177,9 +359,6 @@ header .section2 .container .item .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -214,13 +393,7 @@ header .section2 .container .item .btn .btn-color-fill {
   border-radius: 20px;
 }
 
-header .section2 .container .item .btn:hover .btn-color-fill {
-  width: 97%;
-}
-
-/*-------------------------------------------------*/
 /*----------------------MAIN-----------------------*/
-/*-------------------------------------------------*/
 /*-------------------- section1 -------------------*/
 main .section1 {
   background-color: #f6f6f6;
@@ -235,14 +408,9 @@ main .section1 .container_restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  row-gap: 20px;
 }
 
 main .section1 .container_restaurant article {
@@ -265,8 +433,6 @@ main .section1 .container_restaurant article .item {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 280px;
-  height: 215px;
   position: relative;
 }
 
@@ -274,7 +440,6 @@ main .section1 .container_restaurant article .item img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   width: 100%;
-  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 100% 100%;
