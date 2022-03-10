@@ -302,7 +302,6 @@ footer {
             display :flex;
             flex-direction: row;
             align-items: center;
-            // justify-content: flex-start;
             column-gap: 10px;
             margin-top: 6px;
             .size {
@@ -348,11 +347,23 @@ footer {
 							}
 						}
 					}
+					.patching {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						width: 0;
+						height: 64px;
+						background-color: white;
+					}
 				}
 				&:hover {
 					.check:not(:checked) + label {
 						.price_fill {
 							width: 20%;
+						}
+						.patching {
+							width: 10px;
+							animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
 						}
 						.pricing {
 							.etc {
@@ -373,6 +384,10 @@ footer {
 								opacity: 1;
 							}
 						}
+					}
+					.patching {
+						width: 10px;
+						transform: translateX(-62px);
 					}
 				}
 			}

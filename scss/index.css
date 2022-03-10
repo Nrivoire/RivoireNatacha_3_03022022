@@ -17,7 +17,7 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes spin {
@@ -36,26 +36,20 @@
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    opacity: 0;
+    visibility: hidden;
   }
 }
 
 @-webkit-keyframes show {
   100% {
-    opacity: 1;
+    visibility: visible;
   }
 }
 
 @keyframes show {
   100% {
-    opacity: 1;
+    visibility: visible;
   }
-}
-
-#spinner #page {
-  opacity: 0;
-  -webkit-animation: show 0.2s ease-in-out 3s forwards;
-          animation: show 0.2s ease-in-out 3s forwards;
 }
 
 #spinner .loader {
@@ -79,6 +73,12 @@
   border-color: #FF79DA transparent #9356DC transparent;
   -webkit-animation: spin 3s ease-in-out 0s forwards;
           animation: spin 3s ease-in-out 0s forwards;
+}
+
+#page {
+  visibility: hidden;
+  -webkit-animation: show 0.2s ease-in-out 3s forwards;
+          animation: show 0.2s ease-in-out 3s forwards;
 }
 
 /*-- règles générale --*/
