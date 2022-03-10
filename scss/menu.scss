@@ -8,13 +8,13 @@ $shadow_button_color:#bebebedc;
 $price_color:rgb(58, 58, 58);
 $footer_color:#353535;
 
+/*-- règles générale --*/
 body, footer {
 	font-family : Roboto;
 }
 
 body {
 	margin: 0 auto;
-	width: 320px;
 }
 
 .logo, .hd {
@@ -42,9 +42,11 @@ a {
     }
 }
 
-/*-------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------GENERAL-----------------------*/
+/*------------------------------------------------------*/
+
 /*---------------------HEADER----------------------*/
-/*-------------------------------------------------*/
 header {
 	display: flex;
     align-items: center;
@@ -60,10 +62,7 @@ header {
 	}
 }
 
-
-/*-------------------------------------------------*/
 /*----------------------MAIN-----------------------*/
-/*-------------------------------------------------*/
 main {
 	.section1 {
 		display: flex;
@@ -90,7 +89,6 @@ main {
 				padding-right: 20px;
 				border-top-left-radius: 35px;
 				border-top-right-radius: 35px;
-				width: 87.5%;
 				.heart {
 					i {
 						font-size: 20px;
@@ -161,61 +159,64 @@ main {
 				background-color: white;
 				border-radius: 15px;
 				padding-left: 10px;
-				padding-right: 20px;
+				padding-right: 10px;
 				box-shadow: 0 10px 10px $shadow_item_color;
 				position: relative;
-				.name {
-					font-size: 15px;
-					font-weight: bold;
-					margin-bottom: 5px;
+				.check {
+					display: none;
 				}
-				.description {
-					font-size: 12px;
-					margin-top: 0;
-					z-index: 1;
-				}
-				.price_fill {
-					background-color: $third;
-					width: 0;
-					height: 64px;
-					right: 0;
-					bottom: 0;
-					border-radius: 0 15px 15px 0;
-					position: absolute;
-					transition: linear 200ms;
-					display: flex;
-					align-items: center;
-					justify-content: center;
+				label {
 					cursor: pointer;
-					i {
-						color: white;
-						opacity: 0;
+					height: 64px;
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					.text {
+						width: 81%;
+						.name {
+							font-size: 15px;
+							font-weight: bold;
+							margin-bottom: 5px;
+						}
+						.description {
+							font-size: 12px;
+							margin-top: 0;
+							z-index: 1;
+						}
 					}
-					.price {
-						font-size: 15px;
-						font-weight: bold;
-						color: $price_color;
+					.pricing {
+						height: 50%;
+						width: 19%;
 						align-self: flex-end;
-						margin-bottom: 10px;
-						z-index: 2;
-						position: absolute;
-						transform: translateX(-34px);
+						display: flex;
+						flex-direction: row;
+						align-items: flex-end;
 						background-color: white;
-						padding-left: 8px;
+						.price {
+							font-size: 15px;
+							font-weight: bold;
+							color: $price_color;
+							margin-bottom: 10px;
+							padding-left: 8px;
+						}
 					}
-				}
-				.etc {
-					background-color: white;
-					width: 0;
-					height: 32px;
-					right: 0;
-					bottom: 0;
-					position: absolute;
-					z-index: 2;
-					p {
-						opacity: 0;
-						margin: 0;
-						margin-top: 3px;
+					.price_fill {
+						background-color: $third;
+						width: 0;
+						height: 64px;
+						right: 0;
+						bottom: 0;
+						border-radius: 0 15px 15px 0;
+						position: absolute;
+						transition: linear 200ms;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						i {
+							color: white;
+							opacity: 0;
+						}
 					}
 				}
 				@keyframes slideleftandrotate {
@@ -226,43 +227,35 @@ main {
 						transform: translateX(0) rotate(360deg);
 					}
 				}
-				@keyframes slideleftetc {
+				@keyframes slideleft {
 					from {
-						transform: translateX(-54px);
+						transform: translateX(10px);
 					}
 					to {
-						transform: translateX(-100px);
+						transform: translateX(-62px);
 					}
 				}
 				&:hover {
-					.etc {
-						width: 11%;
-						animation: 0.3s ease-in-out 0s 1 normal forwards slideleftetc;
-						p {
-							opacity: 1;
+					.check:not(:checked) + label {
+						.price_fill {
+							i {
+								opacity: 1;
+								animation: 0.4s ease-in-out 0s slideleftandrotate;
+							}
+						}
+						.pricing {
+							animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
 						}
 					}
-					.check:not(:checked) + label > .price_fill {
-						width: 20%;
+				}
+				.check:checked + label {
+					.pricing {
+						transform: translateX(-62px);
+					}
+					.price_fill {
 						i {
 							opacity: 1;
-							animation: 0.4s ease-in-out 0s slideleftandrotate;
 						}
-						.price {
-							transform: translateX(-54px);
-						}
-					}
-				}
-				.check {
-					display: none;
-				}
-				.check:checked + label > .price_fill {
-					width: 20%;
-					i {
-						opacity: 1;
-					}
-					.price {
-						transform: translateX(-54px);
 					}
 				}
 			}
@@ -289,10 +282,7 @@ main {
 	}
 }
 
-/*-------------------------------------------------*/
 /*--------------------FOOTER-----------------------*/
-/*-------------------------------------------------*/
-
 footer {
     .container {
         background-color: $footer_color;
@@ -312,7 +302,7 @@ footer {
             display :flex;
             flex-direction: row;
             align-items: center;
-            justify-content: flex-start;
+            // justify-content: flex-start;
             column-gap: 10px;
             margin-top: 6px;
             .size {
@@ -323,4 +313,184 @@ footer {
             }
         }
     }
+}
+
+/*------------------------------------------------------*/
+/*-------------------------PHONE------------------------*/
+/*------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+	body {
+		width: 320px;
+	}
+	main {
+		/*-- titre --*/
+		.container_title {
+			.item_title {
+				width: 87.5%;
+			}
+		}
+		/*-- cartes --*/
+		.container {
+			.item {
+				label {
+					.pricing {
+						justify-content: space-between;
+						.etc {
+							width: 0;
+							height: 32px;
+							right: 0;
+							bottom: 0;
+							z-index: 2;
+							p {
+								opacity: 0;
+								margin: 0;
+								margin-top: 3px;
+							}
+						}
+					}
+				}
+				&:hover {
+					.check:not(:checked) + label {
+						.price_fill {
+							width: 20%;
+						}
+						.pricing {
+							.etc {
+								p {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+				.check:checked + label {
+					.price_fill {
+						width: 20%;
+					}
+					.pricing {
+						.etc {
+							p {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*--------------------FOOTER-----------------------*/
+	footer {
+		.container {
+			a {
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------*/
+/*------------------------TABLET------------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	body {
+		width: 768px;
+	}
+
+	/*----------------------MAIN-----------------------*/
+	main {
+		.section1 {
+			/*-- titre --*/
+			.container_title {
+				.item_title {
+					width: 95%;
+				}
+			}
+			/*-- cartes --*/
+			.container {
+				.item {
+					.pricing {
+						justify-content: flex-end;
+						.etc {
+							p {
+								opacity: 0;
+							}
+						}
+					}
+					&:hover {
+						.check:not(:checked) + label > .price_fill {
+							width: 8%;
+						}
+					}
+					.check:checked + label > .price_fill {
+						width: 8%;
+					}
+				}
+			}
+		}
+	}
+
+	/*--------------------FOOTER-----------------------*/
+	footer {
+		.container {
+			justify-content: center;
+			align-items: center;
+			a {
+				justify-content: center;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------*/
+/*------------------------DESKTOP-----------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+	body {
+		width: 992px;
+	}
+
+	/*----------------------MAIN-----------------------*/
+	main {
+		.section1 {
+			/*-- titre --*/
+			.container_title {
+				.item_title {
+					width: 96%;
+				}
+			}
+			/*-- cartes --*/
+			.container {
+				.item {
+					.pricing {
+						justify-content: flex-end;
+						.etc {
+							p {
+								opacity: 0;
+							}
+						}
+					}
+					&:hover {
+						.check:not(:checked) + label > .price_fill {
+							width: 6%;
+						}
+					}
+					.check:checked + label > .price_fill {
+						width: 6%;
+					}
+				}
+			}
+		}
+	}
+
+	/*--------------------FOOTER-----------------------*/
+	footer {
+		.container {
+			justify-content: center;
+			align-items: center;
+			a {
+				justify-content: center;
+			}
+		}
+	}
 }

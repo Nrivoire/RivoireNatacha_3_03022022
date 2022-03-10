@@ -1,11 +1,11 @@
 @charset "UTF-8";
+/*-- règles générale --*/
 body, footer {
   font-family: Roboto;
 }
 
 body {
   margin: 0 auto;
-  width: 320px;
 }
 
 .logo, .hd {
@@ -39,9 +39,10 @@ a {
           transform: scale(1.02);
 }
 
-/*-------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------GENERAL-----------------------*/
+/*------------------------------------------------------*/
 /*---------------------HEADER----------------------*/
-/*-------------------------------------------------*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,9 +66,7 @@ header .logo {
   font-size: 25px;
 }
 
-/*-------------------------------------------------*/
 /*----------------------MAIN-----------------------*/
-/*-------------------------------------------------*/
 main .section1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +113,6 @@ main .section1 .container_title .item_title {
   padding-right: 20px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
-  width: 87.5%;
 }
 
 main .section1 .container_title .item_title .heart i {
@@ -225,25 +223,75 @@ main .section1 .container .item {
   background-color: white;
   border-radius: 15px;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 10px;
   -webkit-box-shadow: 0 10px 10px #E9E9E9;
           box-shadow: 0 10px 10px #E9E9E9;
   position: relative;
 }
 
-main .section1 .container .item .name {
+main .section1 .container .item .check {
+  display: none;
+}
+
+main .section1 .container .item label {
+  cursor: pointer;
+  height: 64px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .section1 .container .item label .text {
+  width: 81%;
+}
+
+main .section1 .container .item label .text .name {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-main .section1 .container .item .description {
+main .section1 .container .item label .text .description {
   font-size: 12px;
   margin-top: 0;
   z-index: 1;
 }
 
-main .section1 .container .item .price_fill {
+main .section1 .container .item label .pricing {
+  height: 50%;
+  width: 19%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: white;
+}
+
+main .section1 .container .item label .pricing .price {
+  font-size: 15px;
+  font-weight: bold;
+  color: #3a3a3a;
+  margin-bottom: 10px;
+  padding-left: 8px;
+}
+
+main .section1 .container .item label .price_fill {
   background-color: #99E2D0;
   width: 0;
   height: 64px;
@@ -262,43 +310,11 @@ main .section1 .container .item .price_fill {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer;
 }
 
-main .section1 .container .item .price_fill i {
+main .section1 .container .item label .price_fill i {
   color: white;
   opacity: 0;
-}
-
-main .section1 .container .item .price_fill .price {
-  font-size: 15px;
-  font-weight: bold;
-  color: #3a3a3a;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 10px;
-  z-index: 2;
-  position: absolute;
-  -webkit-transform: translateX(-34px);
-          transform: translateX(-34px);
-  background-color: white;
-  padding-left: 8px;
-}
-
-main .section1 .container .item .etc {
-  background-color: white;
-  width: 0;
-  height: 32px;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 2;
-}
-
-main .section1 .container .item .etc p {
-  opacity: 0;
-  margin: 0;
-  margin-top: 3px;
 }
 
 @-webkit-keyframes slideleftandrotate {
@@ -323,68 +339,46 @@ main .section1 .container .item .etc p {
   }
 }
 
-@-webkit-keyframes slideleftetc {
+@-webkit-keyframes slideleft {
   from {
-    -webkit-transform: translateX(-54px);
-            transform: translateX(-54px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
   to {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateX(-62px);
+            transform: translateX(-62px);
   }
 }
 
-@keyframes slideleftetc {
+@keyframes slideleft {
   from {
-    -webkit-transform: translateX(-54px);
-            transform: translateX(-54px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
   to {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateX(-62px);
+            transform: translateX(-62px);
   }
 }
 
-main .section1 .container .item:hover .etc {
-  width: 11%;
-  -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleftetc;
-          animation: 0.3s ease-in-out 0s 1 normal forwards slideleftetc;
-}
-
-main .section1 .container .item:hover .etc p {
-  opacity: 1;
-}
-
-main .section1 .container .item:hover .check:not(:checked) + label > .price_fill {
-  width: 20%;
-}
-
-main .section1 .container .item:hover .check:not(:checked) + label > .price_fill i {
+main .section1 .container .item:hover .check:not(:checked) + label .price_fill i {
   opacity: 1;
   -webkit-animation: 0.4s ease-in-out 0s slideleftandrotate;
           animation: 0.4s ease-in-out 0s slideleftandrotate;
 }
 
-main .section1 .container .item:hover .check:not(:checked) + label > .price_fill .price {
-  -webkit-transform: translateX(-54px);
-          transform: translateX(-54px);
+main .section1 .container .item:hover .check:not(:checked) + label .pricing {
+  -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
+          animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
 }
 
-main .section1 .container .item .check {
-  display: none;
+main .section1 .container .item .check:checked + label .pricing {
+  -webkit-transform: translateX(-62px);
+          transform: translateX(-62px);
 }
 
-main .section1 .container .item .check:checked + label > .price_fill {
-  width: 20%;
-}
-
-main .section1 .container .item .check:checked + label > .price_fill i {
+main .section1 .container .item .check:checked + label .price_fill i {
   opacity: 1;
-}
-
-main .section1 .container .item .check:checked + label > .price_fill .price {
-  -webkit-transform: translateX(-54px);
-          transform: translateX(-54px);
 }
 
 main .command {
@@ -414,9 +408,7 @@ main .command button:hover {
           box-shadow: 0 0 15px #bebebedc;
 }
 
-/*-------------------------------------------------*/
 /*--------------------FOOTER-----------------------*/
-/*-------------------------------------------------*/
 footer .container {
   background-color: #353535;
   color: white;
@@ -450,9 +442,6 @@ footer .container a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-column-gap: 10px;
           column-gap: 10px;
   margin-top: 6px;
@@ -464,5 +453,146 @@ footer .container a .size {
 
 footer .container a p {
   margin: 0;
+}
+
+/*------------------------------------------------------*/
+/*-------------------------PHONE------------------------*/
+/*------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    width: 320px;
+  }
+  main {
+    /*-- titre --*/
+    /*-- cartes --*/
+  }
+  main .container_title .item_title {
+    width: 87.5%;
+  }
+  main .container .item label .pricing {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .container .item label .pricing .etc {
+    width: 0;
+    height: 32px;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  main .container .item label .pricing .etc p {
+    opacity: 0;
+    margin: 0;
+    margin-top: 3px;
+  }
+  main .container .item:hover .check:not(:checked) + label .price_fill {
+    width: 20%;
+  }
+  main .container .item:hover .check:not(:checked) + label .pricing .etc p {
+    opacity: 1;
+  }
+  main .container .item .check:checked + label .price_fill {
+    width: 20%;
+  }
+  main .container .item .check:checked + label .pricing .etc p {
+    opacity: 1;
+  }
+  /*--------------------FOOTER-----------------------*/
+  footer .container a {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+/*------------------------------------------------------*/
+/*------------------------TABLET------------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    width: 768px;
+  }
+  /*----------------------MAIN-----------------------*/
+  main .section1 {
+    /*-- titre --*/
+    /*-- cartes --*/
+  }
+  main .section1 .container_title .item_title {
+    width: 95%;
+  }
+  main .section1 .container .item .pricing {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  main .section1 .container .item .pricing .etc p {
+    opacity: 0;
+  }
+  main .section1 .container .item:hover .check:not(:checked) + label > .price_fill {
+    width: 8%;
+  }
+  main .section1 .container .item .check:checked + label > .price_fill {
+    width: 8%;
+  }
+  /*--------------------FOOTER-----------------------*/
+  footer .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .container a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/*------------------------------------------------------*/
+/*------------------------DESKTOP-----------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+  body {
+    width: 992px;
+  }
+  /*----------------------MAIN-----------------------*/
+  main .section1 {
+    /*-- titre --*/
+    /*-- cartes --*/
+  }
+  main .section1 .container_title .item_title {
+    width: 96%;
+  }
+  main .section1 .container .item .pricing {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  main .section1 .container .item .pricing .etc p {
+    opacity: 0;
+  }
+  main .section1 .container .item:hover .check:not(:checked) + label > .price_fill {
+    width: 6%;
+  }
+  main .section1 .container .item .check:checked + label > .price_fill {
+    width: 6%;
+  }
+  /*--------------------FOOTER-----------------------*/
+  footer .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .container a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=menu.css.map */
