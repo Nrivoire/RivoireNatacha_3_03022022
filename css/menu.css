@@ -233,7 +233,7 @@ main .section1 .container .item .check {
   display: none;
 }
 
-main .section1 .container .item label {
+main .section1 .container .item .sub_item {
   cursor: pointer;
   height: 64px;
   width: 100%;
@@ -249,23 +249,23 @@ main .section1 .container .item label {
           align-items: center;
 }
 
-main .section1 .container .item label .text {
+main .section1 .container .item .sub_item .text {
   width: 81%;
 }
 
-main .section1 .container .item label .text .name {
+main .section1 .container .item .sub_item .text .name {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-main .section1 .container .item label .text .description {
+main .section1 .container .item .sub_item .text .description {
   font-size: 12px;
   margin-top: 0;
   z-index: 1;
 }
 
-main .section1 .container .item label .pricing {
+main .section1 .container .item .sub_item .pricing {
   height: 50%;
   width: 19%;
   -ms-flex-item-align: end;
@@ -281,9 +281,10 @@ main .section1 .container .item label .pricing {
       -ms-flex-align: end;
           align-items: flex-end;
   background-color: white;
+  margin: 0;
 }
 
-main .section1 .container .item label .pricing .price {
+main .section1 .container .item .sub_item .pricing .price {
   font-size: 15px;
   font-weight: bold;
   color: #3a3a3a;
@@ -291,7 +292,7 @@ main .section1 .container .item label .pricing .price {
   padding-left: 8px;
 }
 
-main .section1 .container .item label .price_fill {
+main .section1 .container .item .sub_item .price_fill {
   background-color: #99E2D0;
   width: 0;
   height: 64px;
@@ -312,7 +313,7 @@ main .section1 .container .item label .price_fill {
           justify-content: center;
 }
 
-main .section1 .container .item label .price_fill i {
+main .section1 .container .item .sub_item .price_fill i {
   color: white;
   opacity: 0;
 }
@@ -361,24 +362,15 @@ main .section1 .container .item label .price_fill i {
   }
 }
 
-main .section1 .container .item:hover .check:not(:checked) + label .price_fill i {
+main .section1 .container .item:hover .sub_item .price_fill i {
   opacity: 1;
   -webkit-animation: 0.4s ease-in-out 0s slideleftandrotate;
           animation: 0.4s ease-in-out 0s slideleftandrotate;
 }
 
-main .section1 .container .item:hover .check:not(:checked) + label .pricing {
+main .section1 .container .item:hover .sub_item .pricing {
   -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
           animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
-}
-
-main .section1 .container .item .check:checked + label .pricing {
-  -webkit-transform: translateX(-62px);
-          transform: translateX(-62px);
-}
-
-main .section1 .container .item .check:checked + label .price_fill i {
-  opacity: 1;
 }
 
 main .command {
@@ -397,8 +389,7 @@ main .command button {
   color: white;
   border: none;
   border-radius: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 17px 50px;
   font-size: 15px;
 }
 
@@ -469,24 +460,26 @@ footer .container a p {
   main .container_title .item_title {
     width: 87.5%;
   }
-  main .container .item label .pricing {
+  main .container .item .sub_item .pricing {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  main .container .item label .pricing .etc {
-    width: 0;
-    height: 32px;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-  main .container .item label .pricing .etc p {
-    opacity: 0;
+  main .container .item .sub_item .pricing .etc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0;
-    margin-top: 3px;
   }
-  main .container .item label .patching {
+  main .container .item .sub_item .pricing .etc span {
+    opacity: 0;
+    padding-bottom: 10px;
+    padding-left: 2px;
+  }
+  main .container .item .sub_item .patching {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -494,27 +487,16 @@ footer .container a p {
     height: 64px;
     background-color: white;
   }
-  main .container .item:hover .check:not(:checked) + label .price_fill {
+  main .container .item:hover .sub_item .price_fill {
     width: 20%;
   }
-  main .container .item:hover .check:not(:checked) + label .patching {
+  main .container .item:hover .sub_item .patching {
     width: 10px;
     -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
             animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
   }
-  main .container .item:hover .check:not(:checked) + label .pricing .etc p {
+  main .container .item:hover .sub_item .pricing .etc span {
     opacity: 1;
-  }
-  main .container .item .check:checked + label .price_fill {
-    width: 20%;
-  }
-  main .container .item .check:checked + label .pricing .etc p {
-    opacity: 1;
-  }
-  main .container .item .check:checked + label .patching {
-    width: 10px;
-    -webkit-transform: translateX(-62px);
-            transform: translateX(-62px);
   }
   /*--------------------FOOTER-----------------------*/
   footer .container a {
@@ -544,13 +526,10 @@ footer .container a p {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  main .section1 .container .item .pricing .etc p {
+  main .section1 .container .item .pricing .etc span {
     opacity: 0;
   }
-  main .section1 .container .item:hover .check:not(:checked) + label > .price_fill {
-    width: 8%;
-  }
-  main .section1 .container .item .check:checked + label > .price_fill {
+  main .section1 .container .item:hover .sub_item .price_fill {
     width: 8%;
   }
   /*--------------------FOOTER-----------------------*/
@@ -589,13 +568,10 @@ footer .container a p {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  main .section1 .container .item .pricing .etc p {
+  main .section1 .container .item .pricing .etc span {
     opacity: 0;
   }
-  main .section1 .container .item:hover .check:not(:checked) + label > .price_fill {
-    width: 6%;
-  }
-  main .section1 .container .item .check:checked + label > .price_fill {
+  main .section1 .container .item:hover .sub_item .price_fill {
     width: 6%;
   }
   /*--------------------FOOTER-----------------------*/
