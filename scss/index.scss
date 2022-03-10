@@ -134,7 +134,7 @@ header .section1 {
             text-align: center;
             color: $font_grey;
         }
-        button {
+        .btn-redirect {
             background: repeating-linear-gradient($first ,$second);
             color:white;
             font-size: 16px;
@@ -218,7 +218,7 @@ main .section1{
     .container_restaurant {
         display : flex;
         align-items: center;
-        article {
+        .hoover {
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 0 15px $shadow_color;
@@ -262,24 +262,19 @@ main .section1{
                         text-shadow: 0.5px 0 rgba(0, 0, 0, 0.555);
                         letter-spacing: 0.5px;
                     }
-                    .heart {
-                        i {
-                            font-size: 20px;
-                            -webkit-text-stroke: 0.5px black;
-                            color: white;
-							cursor: pointer;
-                            &:hover {
-                                color: $second;
-                                transition: linear 400ms;
-                            }
+                    i {
+                        font-size: 20px;
+                        -webkit-text-stroke: 0.5px black;
+                        color: white;
+						cursor: pointer;
+                        &:hover {
+                            color: $second;
+                            transition: linear 400ms;
                         }
-						.fill-heart {
-							display: none;
-						}
-						.fill-heart:checked + label > i {
-							color: $second;
-						}
                     }
+					.fill-heart {
+						display: none;
+					}
                 }
             }
         }
@@ -358,7 +353,7 @@ footer {
         .container_restaurant {
             flex-direction: column;
             row-gap: 20px;
-            article {
+            .hoover {
                 .item {
     	            width: 280px;
     	            height: 215px;
@@ -411,7 +406,7 @@ footer {
             row-gap: 30px;
             margin: 50px 50px;
             justify-content: center;
-            article {
+            .hoover {
                 .item {
     	            width: 310px;
     	            height: 255px;
@@ -474,7 +469,7 @@ footer {
             row-gap: 30px;
             margin: 50px 50px;
             justify-content: center;
-            article {
+            .hoover {
                 .item {
     	            width: 370px;
     	            height: 255px;

@@ -187,7 +187,7 @@ header .section1 .redirect p {
   color: #424242;
 }
 
-header .section1 .redirect button {
+header .section1 .redirect .btn-redirect {
   background: repeating-linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-size: 16px;
@@ -197,7 +197,7 @@ header .section1 .redirect button {
   border: none;
 }
 
-header .section1 .redirect button:hover {
+header .section1 .redirect .btn-redirect:hover {
   background: repeating-linear-gradient(#ff83dd, #985ede);
   -webkit-box-shadow: 0 0 25px #bebebedc;
           box-shadow: 0 0 25px #bebebedc;
@@ -309,19 +309,19 @@ main .section1 .container_restaurant {
           align-items: center;
 }
 
-main .section1 .container_restaurant article {
+main .section1 .container_restaurant .hoover {
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 15px #bebebedc;
           box-shadow: 0 0 15px #bebebedc;
 }
 
-main .section1 .container_restaurant article p {
+main .section1 .container_restaurant .hoover p {
   margin: 0;
   margin-top: 5px;
 }
 
-main .section1 .container_restaurant article .item {
+main .section1 .container_restaurant .hoover .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,7 +332,7 @@ main .section1 .container_restaurant article .item {
   position: relative;
 }
 
-main .section1 .container_restaurant article .item img {
+main .section1 .container_restaurant .hoover .item img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   width: 100%;
@@ -342,7 +342,7 @@ main .section1 .container_restaurant article .item img {
      object-position: 100% 100%;
 }
 
-main .section1 .container_restaurant article .item .new {
+main .section1 .container_restaurant .hoover .item .new {
   position: absolute;
   top: 8px;
   right: 10px;
@@ -356,7 +356,7 @@ main .section1 .container_restaurant article .item .new {
   border-radius: 2px;
 }
 
-main .section1 .container_restaurant article .item .info {
+main .section1 .container_restaurant .hoover .item .info {
   margin-left: 12px;
   margin-top: 5px;
   display: -webkit-box;
@@ -371,31 +371,27 @@ main .section1 .container_restaurant article .item .info {
   margin-right: 20px;
 }
 
-main .section1 .container_restaurant article .item .info .name {
+main .section1 .container_restaurant .hoover .item .info .name {
   font-weight: bold;
   text-shadow: 0.5px 0 rgba(0, 0, 0, 0.555);
   letter-spacing: 0.5px;
 }
 
-main .section1 .container_restaurant article .item .info .heart i {
+main .section1 .container_restaurant .hoover .item .info i {
   font-size: 20px;
   -webkit-text-stroke: 0.5px black;
   color: white;
   cursor: pointer;
 }
 
-main .section1 .container_restaurant article .item .info .heart i:hover {
+main .section1 .container_restaurant .hoover .item .info i:hover {
   color: #9356DC;
   -webkit-transition: linear 400ms;
   transition: linear 400ms;
 }
 
-main .section1 .container_restaurant article .item .info .heart .fill-heart {
+main .section1 .container_restaurant .hoover .item .info .fill-heart {
   display: none;
-}
-
-main .section1 .container_restaurant article .item .info .heart .fill-heart:checked + label > i {
-  color: #9356DC;
 }
 
 /*-------------------------------------------------*/
@@ -481,11 +477,11 @@ footer .container a p {
             flex-direction: column;
     row-gap: 20px;
   }
-  main .section1 .container_restaurant article .item {
+  main .section1 .container_restaurant .hoover .item {
     width: 280px;
     height: 215px;
   }
-  main .section1 .container_restaurant article .item img {
+  main .section1 .container_restaurant .hoover .item img {
     height: 150px;
   }
 }
@@ -529,11 +525,11 @@ footer .container a p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main .section1 .container_restaurant article .item {
+  main .section1 .container_restaurant .hoover .item {
     width: 310px;
     height: 255px;
   }
-  main .section1 .container_restaurant article .item img {
+  main .section1 .container_restaurant .hoover .item img {
     height: 190px;
   }
   /*--------------------FOOTER-----------------------*/
@@ -591,11 +587,11 @@ footer .container a p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main .section1 .container_restaurant article .item {
+  main .section1 .container_restaurant .hoover .item {
     width: 370px;
     height: 255px;
   }
-  main .section1 .container_restaurant article .item img {
+  main .section1 .container_restaurant .hoover .item img {
     height: 190px;
   }
   /*--------------------FOOTER-----------------------*/
