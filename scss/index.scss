@@ -17,6 +17,8 @@ $footer_background: #353535;
     }
     100% {
         transform: rotate(360deg);
+        //visibility: ;
+        //opacity: ;
     }
 }
 #spinner {
@@ -43,6 +45,7 @@ $footer_background: #353535;
 }
 #page {
     display: none;
+    
 }
 
 /*-- règles générale --*/
