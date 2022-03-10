@@ -88,161 +88,6 @@ a {
     }
 }
 
-/*------------------------------------------------------*/
-/*-------------------------PHONE------------------------*/
-/*------------------------------------------------------*/
-@media screen and (max-width: 767px) {
-    body {
-        width: 320px;
-    }
-    /*---------------------HEADER----------------------*/
-    /*-------------------- section1 -------------------*/
-    header .section1 {
-        .localization {
-            input {
-                width: 40%;
-            }
-        }
-    }
-    /*-------------------- section2 -------------------*/
-    header .section2 {
-        .container {
-            .item {
-                .btn {
-                    width: 98%;
-                    justify-content: flex-start;
-                    &:hover .btn-color-fill {
-                        width: 97%;
-                    }
-                }
-            }
-        }
-    }
-    /*----------------------MAIN-----------------------*/
-    /*-------------------- section1 -------------------*/
-    main .section1{
-        .container_restaurant {
-            flex-direction: column;
-            row-gap: 20px;
-            article {
-                .item {
-    	            width: 280px;
-    	            height: 215px;
-                    img {
-                        height: 150px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/*------------------------------------------------------*/
-/*------------------------TABLET------------------------*/
-/*------------------------------------------------------*/
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    body {
-        width: 768px;
-    }
-    /*---------------------HEADER----------------------*/
-    /*-------------------- section1 -------------------*/
-    header .section1 {
-        .localization {
-            input {
-                width: 15%;
-            }
-        }
-    }
-    /*-------------------- section2 -------------------*/
-    header .section2 {
-        .container {
-            .item {
-                .btn {
-                    width: 100%;
-                    justify-content: center;
-                    &:hover .btn-color-fill {
-                        width: 99%;
-                    }
-                }
-            }
-        }
-    }
-    /*----------------------MAIN-----------------------*/
-    /*-------------------- section1 -------------------*/
-    main .section1{
-        .container_restaurant {
-            flex-wrap: wrap;
-            flex-direction: row;
-            column-gap: 40px;
-            row-gap: 30px;
-            margin: 50px 50px;
-            justify-content: center;
-            article {
-                .item {
-    	            width: 310px;
-    	            height: 255px;
-                    img {
-                        height: 190px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/*------------------------------------------------------*/
-/*------------------------DESKTOP-----------------------*/
-/*------------------------------------------------------*/
-@media screen and (min-width: 992px) {
-    body {
-        width: 992px;
-    }
-    /*---------------------HEADER----------------------*/
-    /*-------------------- section1 -------------------*/
-    header .section1 {
-        .localization {
-            input {
-                width: 15%;
-            }
-        }
-    }
-    /*-------------------- section2 -------------------*/
-    header .section2 {
-        .container {
-            .item {
-                .btn {
-                    width: 100%;
-                    justify-content: center;
-                    &:hover .btn-color-fill {
-                        width: 99%;
-                    }
-                }
-            }
-        }
-    }
-    /*----------------------MAIN-----------------------*/
-    /*-------------------- section1 -------------------*/
-    main .section1{
-        .container_restaurant {
-            flex-wrap: wrap;
-            flex-direction: row;
-            column-gap: 50px;
-            row-gap: 30px;
-            margin: 50px 50px;
-            justify-content: center;
-            article {
-                .item {
-    	            width: 370px;
-    	            height: 255px;
-                    img {
-                        height: 190px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 /*---------------------HEADER----------------------*/
 /*-------------------- section1 -------------------*/
 header .section1 {
@@ -475,4 +320,179 @@ footer {
             }
         }
     }
+}
+
+/*------------------------------------------------------*/
+/*-------------------------PHONE------------------------*/
+/*------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+    body {
+        width: 320px;
+    }
+    /*---------------------HEADER----------------------*/
+    /*-------------------- section1 -------------------*/
+    header .section1 {
+        .localization {
+            input {
+                width: 40%;
+            }
+        }
+    }
+    /*-------------------- section2 -------------------*/
+    header .section2 {
+        .container {
+            .item {
+                .btn {
+                    width: 98%;
+                    justify-content: flex-start;
+                    &:hover .btn-color-fill {
+                        width: 97%;
+                    }
+                }
+            }
+        }
+    }
+    /*----------------------MAIN-----------------------*/
+    /*-------------------- section1 -------------------*/
+    main .section1{
+        .container_restaurant {
+            flex-direction: column;
+            row-gap: 20px;
+            article {
+                .item {
+    	            width: 280px;
+    	            height: 215px;
+                    img {
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------*/
+/*------------------------TABLET------------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        width: 768px;
+    }
+    /*---------------------HEADER----------------------*/
+    /*-------------------- section1 -------------------*/
+    header .section1 {
+        .localization {
+            input {
+                width: 15%;
+            }
+        }
+    }
+    /*-------------------- section2 -------------------*/
+    header .section2 {
+        .container {
+            .item {
+                .btn {
+                    width: 100%;
+                    justify-content: center;
+                    &:hover .btn-color-fill {
+                        width: 99%;
+                    }
+                }
+            }
+        }
+    }
+    /*----------------------MAIN-----------------------*/
+    /*-------------------- section1 -------------------*/
+    main .section1{
+        .container_restaurant {
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 40px;
+            row-gap: 30px;
+            margin: 50px 50px;
+            justify-content: center;
+            article {
+                .item {
+    	            width: 310px;
+    	            height: 255px;
+                    img {
+                        height: 190px;
+                    }
+                }
+            }
+        }
+    }
+    /*--------------------FOOTER-----------------------*/
+	footer {
+		.container {
+			justify-content: center;
+			align-items: center;
+			a {
+				justify-content: center;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------*/
+/*------------------------DESKTOP-----------------------*/
+/*------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+    body {
+        width: 992px;
+    }
+    /*---------------------HEADER----------------------*/
+    /*-------------------- section1 -------------------*/
+    header .section1 {
+        .localization {
+            input {
+                width: 15%;
+            }
+        }
+    }
+    /*-------------------- section2 -------------------*/
+    header .section2 {
+        .container {
+            .item {
+                .btn {
+                    width: 100%;
+                    justify-content: center;
+                    &:hover .btn-color-fill {
+                        width: 99%;
+                    }
+                }
+            }
+        }
+    }
+    /*----------------------MAIN-----------------------*/
+    /*-------------------- section1 -------------------*/
+    main .section1{
+        .container_restaurant {
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 50px;
+            row-gap: 30px;
+            margin: 50px 50px;
+            justify-content: center;
+            article {
+                .item {
+    	            width: 370px;
+    	            height: 255px;
+                    img {
+                        height: 190px;
+                    }
+                }
+            }
+        }
+    }
+    /*--------------------FOOTER-----------------------*/
+	footer {
+		.container {
+			justify-content: center;
+			align-items: center;
+			a {
+				justify-content: center;
+			}
+		}
+	}
 }
