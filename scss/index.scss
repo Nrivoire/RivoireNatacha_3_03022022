@@ -15,13 +15,28 @@ $footer_background: #353535;
     0% {
         transform: rotate(0deg);
     }
+    33% {
+        transform: rotate(360deg);
+    }
+    66% {
+        transform: rotate(0deg);
+    }
     100% {
         transform: rotate(360deg);
-        //visibility: ;
-        //opacity: ;
+        opacity: 0;
     }
 }
+@keyframes show {
+    100% {
+        opacity: 1;
+    }
+}
+
 #spinner {
+    #page {
+        opacity: 0;
+        animation: show 0.2s ease-in-out 3s forwards;
+    }
     .loader {
         display: inline-block;
         width: 80px;
@@ -39,14 +54,11 @@ $footer_background: #353535;
             border-radius: 50%;
             border: 10px solid;
             border-color: $first transparent $second transparent;
-            animation: spin 1.5s ease-in-out infinite;
+            animation: spin 3s ease-in-out 0s forwards;
         }
     }
 }
-#page {
-    display: none;
-    
-}
+
 
 /*-- règles générale --*/
 body {
