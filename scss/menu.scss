@@ -15,6 +15,7 @@ body, footer {
 
 body {
 	margin: 0 auto;
+	width: 320px;
 }
 
 .logo, .hd {
@@ -78,6 +79,7 @@ main {
 		.container_title {
 			position: relative;
 			.item_title {
+				width: 87.5%;
 				background-color: $background_color_light_grey;
 				position: absolute;
 				bottom: -15px;
@@ -102,9 +104,6 @@ main {
 					}
 					.fill-heart {
 						display: none;
-					}
-					.fill-heart:checked + label > i {
-						color: $second;
 					}
 				}
 			}
@@ -172,6 +171,14 @@ main {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
+					.patching {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						width: 0;
+						height: 64px;
+						background-color: white;
+					}
 					.text {
 						width: 81%;
 						.name {
@@ -186,6 +193,7 @@ main {
 						}
 					}
 					.pricing {
+						justify-content: space-between;
 						height: 50%;
 						width: 19%;
 						align-self: flex-end;
@@ -194,6 +202,16 @@ main {
 						align-items: flex-end;
 						background-color: white;
 						margin: 0;
+						.etc {
+							display: flex;
+							align-items: center;
+							margin: 0;
+							span {
+								opacity: 0;
+								padding-bottom: 10px;
+								padding-left: 2px;
+							}
+						}
 						.price {
 							font-size: 15px;
 							font-weight: bold;
@@ -239,12 +257,22 @@ main {
 				&:hover {
 					.sub_item {
 						.price_fill {
+							width: 20%;
 							i {
 								opacity: 1;
 								animation: 0.4s ease-in-out 0s slideleftandrotate;
 							}
 						}
 						.pricing {
+							animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
+							.etc {
+								span {
+									opacity: 1;
+								}
+							}
+						}
+						.patching {
+							width: 10px;
 							animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
 						}
 					}
@@ -279,6 +307,7 @@ footer {
         color: white;
         display :flex;
         flex-direction: column;
+		justify-content: flex-start;
         padding-left: 25px;
         padding-bottom: 30px;
 		font-size: 12px;
@@ -302,78 +331,6 @@ footer {
             }
         }
     }
-}
-
-/*------------------------------------------------------*/
-/*-------------------------PHONE------------------------*/
-/*------------------------------------------------------*/
-@media screen and (max-width: 767px) {
-	body {
-		width: 320px;
-	}
-	main {
-		/*-- titre --*/
-		.container_title {
-			.item_title {
-				width: 87.5%;
-			}
-		}
-		/*-- cartes --*/
-		.container {
-			.item {
-				.sub_item {
-					.pricing {
-						justify-content: space-between;
-						.etc {
-							display: flex;
-							align-items: center;
-							margin: 0;
-							span {
-								opacity: 0;
-								padding-bottom: 10px;
-								padding-left: 2px;
-							}
-						}
-					}
-					.patching {
-						position: absolute;
-						right: 0;
-						bottom: 0;
-						width: 0;
-						height: 64px;
-						background-color: white;
-					}
-				}
-				&:hover {
-					.sub_item {
-						.price_fill {
-							width: 20%;
-						}
-						.patching {
-							width: 10px;
-							animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
-						}
-						.pricing {
-							.etc {
-								span {
-									opacity: 1;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	/*--------------------FOOTER-----------------------*/
-	footer {
-		.container {
-			a {
-				justify-content: flex-start;
-			}
-		}
-	}
 }
 
 /*------------------------------------------------------*/

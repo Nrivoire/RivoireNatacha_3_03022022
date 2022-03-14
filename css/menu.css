@@ -6,6 +6,7 @@ body, footer {
 
 body {
   margin: 0 auto;
+  width: 320px;
 }
 
 .logo, .hd {
@@ -93,6 +94,7 @@ main .section1 .container_title {
 }
 
 main .section1 .container_title .item_title {
+  width: 87.5%;
   background-color: #f6f6f6;
   position: absolute;
   bottom: -15px;
@@ -130,10 +132,6 @@ main .section1 .container_title .item_title .heart i:hover {
 
 main .section1 .container_title .item_title .heart .fill-heart {
   display: none;
-}
-
-main .section1 .container_title .item_title .heart .fill-heart:checked + label > i {
-  color: #9356DC;
 }
 
 main .section1 .container {
@@ -249,6 +247,15 @@ main .section1 .container .item .sub_item {
           align-items: center;
 }
 
+main .section1 .container .item .sub_item .patching {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 64px;
+  background-color: white;
+}
+
 main .section1 .container .item .sub_item .text {
   width: 81%;
 }
@@ -266,6 +273,9 @@ main .section1 .container .item .sub_item .text .description {
 }
 
 main .section1 .container .item .sub_item .pricing {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 50%;
   width: 19%;
   -ms-flex-item-align: end;
@@ -282,6 +292,22 @@ main .section1 .container .item .sub_item .pricing {
           align-items: flex-end;
   background-color: white;
   margin: 0;
+}
+
+main .section1 .container .item .sub_item .pricing .etc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+main .section1 .container .item .sub_item .pricing .etc span {
+  opacity: 0;
+  padding-bottom: 10px;
+  padding-left: 2px;
 }
 
 main .section1 .container .item .sub_item .pricing .price {
@@ -362,6 +388,10 @@ main .section1 .container .item .sub_item .price_fill i {
   }
 }
 
+main .section1 .container .item:hover .sub_item .price_fill {
+  width: 20%;
+}
+
 main .section1 .container .item:hover .sub_item .price_fill i {
   opacity: 1;
   -webkit-animation: 0.4s ease-in-out 0s slideleftandrotate;
@@ -369,6 +399,16 @@ main .section1 .container .item:hover .sub_item .price_fill i {
 }
 
 main .section1 .container .item:hover .sub_item .pricing {
+  -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
+          animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
+}
+
+main .section1 .container .item:hover .sub_item .pricing .etc span {
+  opacity: 1;
+}
+
+main .section1 .container .item:hover .sub_item .patching {
+  width: 10px;
   -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
           animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
 }
@@ -410,6 +450,9 @@ footer .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-left: 25px;
   padding-bottom: 30px;
   font-size: 12px;
@@ -444,66 +487,6 @@ footer .container a .size {
 
 footer .container a p {
   margin: 0;
-}
-
-/*------------------------------------------------------*/
-/*-------------------------PHONE------------------------*/
-/*------------------------------------------------------*/
-@media screen and (max-width: 767px) {
-  body {
-    width: 320px;
-  }
-  main {
-    /*-- titre --*/
-    /*-- cartes --*/
-  }
-  main .container_title .item_title {
-    width: 87.5%;
-  }
-  main .container .item .sub_item .pricing {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  main .container .item .sub_item .pricing .etc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-  }
-  main .container .item .sub_item .pricing .etc span {
-    opacity: 0;
-    padding-bottom: 10px;
-    padding-left: 2px;
-  }
-  main .container .item .sub_item .patching {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 0;
-    height: 64px;
-    background-color: white;
-  }
-  main .container .item:hover .sub_item .price_fill {
-    width: 20%;
-  }
-  main .container .item:hover .sub_item .patching {
-    width: 10px;
-    -webkit-animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
-            animation: 0.3s ease-in-out 0s 1 normal forwards slideleft;
-  }
-  main .container .item:hover .sub_item .pricing .etc span {
-    opacity: 1;
-  }
-  /*--------------------FOOTER-----------------------*/
-  footer .container a {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
 }
 
 /*------------------------------------------------------*/
