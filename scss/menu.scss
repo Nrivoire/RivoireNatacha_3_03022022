@@ -121,6 +121,27 @@ main {
 			}
 		}
 		/*-- cartes --*/
+		@keyframes slidetop {
+			0% {
+				transform: translateY(20%);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+		.entree {
+			opacity: 0;
+			animation: 1.5s ease-out 0s slidetop forwards;
+		}
+		.plat {
+			opacity: 0;
+			animation: 1.5s ease-out 1s slidetop forwards;
+		}
+		.dessert {
+			opacity: 0;
+			animation: 1.5s ease-out 2s slidetop forwards;
+		}
 		.container {
 			display: flex;
 			flex-direction: column;
@@ -142,16 +163,6 @@ main {
 					bottom: -8px;
 					left: 0;
 					width: 42px;
-				}
-			}
-			@keyframes slidetop {
-				0% {
-					opacity: 0;
-					transform: translateY(20%);
-				}
-				100% {
-					opacity: 1;
-					transform: translateY(0%);
 				}
 			}
 			.item1 {
