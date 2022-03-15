@@ -276,17 +276,26 @@ main .section1{
                     }
                     i {
                         font-size: 20px;
-                        -webkit-text-stroke: 0.5px black;
-                        color: white;
+                        color: black;
 						cursor: pointer;
-                        &:hover {
-                            color: $second;
+                        position: relative;
+                        .gradient {
+                            left: 0;
+                            position: absolute;
+                            opacity: 0;
+                            background: linear-gradient($second, $first);
                             transition: linear 400ms;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                        &:hover {
+                            color: white;
+                            .gradient {
+                                opacity: 1;
+                            }
                         }
                     }
-					.fill-heart {
-						display: none;
-					}
                 }
             }
         }
@@ -335,6 +344,12 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body {
         width: 768px;
+    }
+    #spinner {
+        .loader {
+            left: 44%;
+            top: 40%;
+        }
     }
     /*---------------------HEADER----------------------*/
     /*-------------------- section1 -------------------*/
@@ -398,6 +413,12 @@ footer {
 @media screen and (min-width: 992px) {
     body {
         width: 992px;
+    }
+    #spinner {
+        .loader {
+            left: 45%;
+            top: 40%;
+        }
     }
     /*---------------------HEADER----------------------*/
     /*-------------------- section1 -------------------*/

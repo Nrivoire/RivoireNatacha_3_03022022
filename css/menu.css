@@ -119,15 +119,30 @@ main .section1 .container_title .item_title {
 
 main .section1 .container_title .item_title .heart i {
   font-size: 20px;
-  -webkit-text-stroke: 0.5px black;
-  color: #f6f6f6;
+  color: black;
   cursor: pointer;
+  position: relative;
+}
+
+main .section1 .container_title .item_title .heart i .gradient {
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-transition: linear 400ms;
+  transition: linear 400ms;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main .section1 .container_title .item_title .heart i:hover {
-  color: #9356DC;
-  -webkit-transition: linear 400ms;
-  transition: linear 400ms;
+  color: white;
+}
+
+main .section1 .container_title .item_title .heart i:hover .gradient {
+  opacity: 1;
 }
 
 main .section1 .container_title .item_title .heart .fill-heart {
